@@ -20,6 +20,8 @@
         <FILE id="Wll6Hl" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
         <FILE id="oyH8af" name="MyBubbles.cpp" compile="1" resource="0" file="Source/MyBubbles.cpp"/>
         <FILE id="RIde6f" name="MyBubbles.h" compile="0" resource="0" file="Source/MyBubbles.h"/>
+        <FILE id="DhuJ86" name="AudioScope.cpp" compile="1" resource="0" file="Source/AudioScope.cpp"/>
+        <FILE id="IYwYLp" name="AudioScope.h" compile="0" resource="0" file="Source/AudioScope.h"/>
         <GROUP id="{C6A90387-BE72-1C2A-3253-A2A6893FF29B}" name="Resources">
           <FILE id="xpBbLH" name="squueze.svg" compile="0" resource="1" file="../../../Creative Cloud Files/squueze.svg"/>
           <FILE id="qBt4rD" name="cog_2.svg" compile="0" resource="1" file="../../../Creative Cloud Files/cog_2.svg"/>
@@ -30,6 +32,10 @@
       </GROUP>
       <GROUP id="{1F09A3BF-817E-8505-F873-7F8F223361A3}" name="Audio">
         <FILE id="eGL4Jk" name="FilePlayer.cpp" compile="1" resource="0" file="Source/FilePlayer.cpp"/>
+        <FILE id="fMR0Ro" name="AudioScopeCollector.cpp" compile="1" resource="0"
+              file="Source/AudioScopeCollector.cpp"/>
+        <FILE id="o983Qf" name="AudioScopeCollector.h" compile="0" resource="0"
+              file="Source/AudioScopeCollector.h"/>
         <FILE id="WGMmLo" name="FilePlayer.hpp" compile="0" resource="0" file="Source/FilePlayer.hpp"/>
         <FILE id="WukCdL" name="Gain.cpp" compile="1" resource="0" file="Source/Gain.cpp"/>
         <FILE id="u8PV5V" name="Gain.hpp" compile="0" resource="0" file="Source/Gain.hpp"/>
@@ -38,6 +44,10 @@
         <FILE id="KnVlNi" name="PluginProcessor.h" compile="0" resource="0"
               file="Source/PluginProcessor.h"/>
         <FILE id="VozDst" name="Distortion.hpp" compile="0" resource="0" file="Source/Distortion.hpp"/>
+        <FILE id="oMl25X" name="AudioBufferQueue.cpp" compile="1" resource="0"
+              file="Source/AudioBufferQueue.cpp"/>
+        <FILE id="nZBoUw" name="AudioBufferQueue.h" compile="0" resource="0"
+              file="Source/AudioBufferQueue.h"/>
         <FILE id="zsvhph" name="Distortion.cpp" compile="1" resource="0" file="Source/Distortion.cpp"/>
       </GROUP>
       <FILE id="WB5Qat" name="Identifiers.hpp" compile="0" resource="0" file="Source/Identifiers.hpp"/>

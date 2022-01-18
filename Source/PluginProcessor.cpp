@@ -40,7 +40,7 @@ New_PrototypeAudioProcessor::New_PrototypeAudioProcessor()
         
 #endif
 {
-    
+    audioScopeCollector = new AudioScopeCollector(audioBufferQueue);
 }
 
 New_PrototypeAudioProcessor::~New_PrototypeAudioProcessor()

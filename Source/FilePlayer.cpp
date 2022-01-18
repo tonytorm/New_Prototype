@@ -43,7 +43,7 @@ void FilePlayer::loadFile(const File& newFile)
     
     if (auto reader = formatManager.createReaderFor (newFile))
     {
-        //currentFile = audioFile;
+        // currentFile = audioFile;
         currentAudioFileSource = std::make_unique<AudioFormatReaderSource> (reader, true);
         
         // ..and plug it into our transport source

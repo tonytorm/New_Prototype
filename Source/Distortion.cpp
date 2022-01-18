@@ -54,17 +54,12 @@ void Distortion::process (juce::dsp::ProcessContextReplacing<float> context)
     dsp::AudioBlock<float> oversampledBlock  = mOversampling -> processSamplesUp(context.getInputBlock());
     
     auto waveshaperContext = dsp::ProcessContextReplacing<float>(oversampledBlock);
-    
     mWaveShaper.process(waveshaperContext);
-    
     waveshaperContext.getOutputBlock() *= 0.8f;
-    
+   
     mOversampling->processSamplesDown(context.getOutputBlock());
     
     outputVolume.process(context);
-    
-    
-    
 }
 
 // update value tree state parameters

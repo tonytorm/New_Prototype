@@ -6,6 +6,8 @@
 #include "Identifiers.hpp"
 #include "Gain.hpp"
 #include "FilePlayer.hpp"
+#include "AudioScopeCollector.h"
+#include "AudioBufferQueue.h"
 
 
 //==============================================================================
@@ -53,7 +55,7 @@ public:
     juce::AudioProcessorValueTreeState& getState(); // returns state of ValueTreeState
     float getRMSValue(const int channel) const; // grabs rms value from channel
     FilePlayer* getFilePlayer() {return &filePlayer;}; // links file player guy
-    
+    AudioBufferQueue& getAudioBufferQueue() noexcept { return audioBufferQueue; };
     
 private:
     //==============================================================================
@@ -64,6 +66,8 @@ private:
     float sideCoeff;
     LinearSmoothedValue<float> leftRMS, rightRMS;
     FilePlayer filePlayer;
+    AudioBufferQueue audioBufferQueue;
+    AudioScopeCollector* audioScopeCollector { nullptr };
    
     
 };
