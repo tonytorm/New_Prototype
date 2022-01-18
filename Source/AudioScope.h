@@ -23,7 +23,11 @@ public:
     void timerCallback() override;
     /**Simply takes and return an integer value, used to change RGBA values in colors*/
     int changeColour(int value);
-    /**plots (paints) a line within a defined rectangle, the points of the line are defined by the buffer queue data*/
+    /**plots (paints) a line within a defined rectangle, the points of the line are defined by the buffer queue data
+     * @param data  the output buffer data
+     * @param g  the graphics system
+     * @param rect  the rectangle within the plot will be painted
+     * @param scaler,offset values to adjust the position of the line within rect*/
     static void plot (const SampleType* data,
                       size_t numSamples,
                       juce::Graphics& g,

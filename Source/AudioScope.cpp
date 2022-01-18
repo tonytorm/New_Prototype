@@ -73,10 +73,18 @@ void AudioScope::timerCallback()
     auto gain = h * scaler;
 
     for (size_t i = 1; i < numSamples; ++i)
-        g.drawLine ({ juce::jmap (SampleType (i - 1), SampleType (0), SampleType (numSamples - 1), SampleType (right - w), SampleType (right)),
-                      center - gain * data[i - 1],
-                      juce::jmap (SampleType (i), SampleType (0), SampleType (numSamples - 1), SampleType (right - w), SampleType (right)),
-                      center - gain * data[i] }, 2.0f);
+        g.drawLine ({ juce::jmap (SampleType (i - 1),
+                                  SampleType (0),
+                                  SampleType (numSamples - 1),
+                                  SampleType (right - w),
+                                  SampleType (right)),
+                                  center - gain * data[i - 1],
+                                  juce::jmap (SampleType (i), SampleType (0),
+                                  SampleType (numSamples - 1),
+                                  SampleType (right - w),
+                                  SampleType (right)),
+                                  center - gain * data[i] },
+                                  2.0f);
       
 }
 
