@@ -6,6 +6,7 @@
 New_PrototypeAudioProcessorEditor::New_PrototypeAudioProcessorEditor (New_PrototypeAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p), mParameter(p.getState())
 {
+    scopeComponent = new AudioScope(audioProcessor.getAudioBufferQueue());
     setSize (400, 300);
     addAndMakeVisible(myInputVolumeSlider);
     myInputVolumeSlider.setSliderStyle(Slider::SliderStyle::Rotary);
@@ -18,6 +19,11 @@ New_PrototypeAudioProcessorEditor::New_PrototypeAudioProcessorEditor (New_Protot
     addAndMakeVisible(meterR);
     meterL.toBack();
     meterR.toBack();
+    auto area = getLocalBounds();
+    addAndMakeVisible(*scopeComponent);
+    scopeComponent->setTopLeftPosition (0, 240);
+    scopeComponent->setSize (area.getWidth(), area.getHeight() - 240);
+    scopeComponent->toBack();
     
     startTimerHz(60);
     initialiseGui();
@@ -43,7 +49,7 @@ New_PrototypeAudioProcessorEditor::~New_PrototypeAudioProcessorEditor()
 //==============================================================================
 void New_PrototypeAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    g.fillAll(Colours::lightgoldenrodyellow);
+    //g.fillAll(Colours::lightgoldenrodyellow);
 }
 
 void New_PrototypeAudioProcessorEditor::resized()
@@ -51,8 +57,8 @@ void New_PrototypeAudioProcessorEditor::resized()
     myInputVolumeSlider.setBounds(getWidth()-20, getHeight(), 280, 500);
     myInputVolumeSlider.setCentrePosition(getWidth()-40, getHeight()/2-50);
     
-    meterL.setBounds(0, 0, getWidth()/2, getHeight());
-    meterR.setBounds(getWidth()/2, 0, getWidth()/2, getHeight());
+    meterL.setBounds(0, 0, getWidth()/2, getHeight()-60);
+    meterR.setBounds(getWidth()/2, 0, getWidth()/2, getHeight()-60);
     
     myInputVolumeSlider.isAlwaysOnTop();
     filePlayerGui.setBounds(0, 0, getWidth(), 30);
@@ -60,6 +66,7 @@ void New_PrototypeAudioProcessorEditor::resized()
     title.setBounds(getWidth()/2, 20, 100, 100);
     title.setCentrePosition(getWidth()/2, 50);
     title.setAlwaysOnTop(true);
+    scopeComponent->setAlwaysOnTop(true);
 }
 
 void New_PrototypeAudioProcessorEditor::initialiseGui() // initialise slider values/attachments
@@ -74,8 +81,10 @@ void New_PrototypeAudioProcessorEditor::timerCallback()
     meterR.setLevel(audioProcessor.getRMSValue(1));
     meterL.repaint();
     meterR.repaint();
+    // update various components color based on slider value
     meterL.changeColour((int)myInputVolumeSlider.getValue());
     meterR.changeColour((int)myInputVolumeSlider.getValue());
+    scopeComponent->changeColour((int)myInputVolumeSlider.getValue());
     otherLookAndFeel.colourChanger((int)myInputVolumeSlider.getValue()*6);
     meterL.setFrameCount(frameCount);
     meterR.setFrameCount(frameCount);

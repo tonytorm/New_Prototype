@@ -25,20 +25,16 @@ void AudioScope::setFramesPerSecond(int framesPerSecond)
 
 void AudioScope::paint (juce::Graphics& g) 
    {
-       g.fillAll (juce::Colours::black);
-       g.setColour (juce::Colours::white);
+       g.fillAll (juce::Colour(250, 250 - colourChanger * 8, 210 - colourChanger*10).withBrightness(0.4));
+       g.setColour (juce::Colour(250, 250 - colourChanger * 8, 210 - colourChanger*10));
 
        auto area = getLocalBounds();
        auto h = (SampleType) area.getHeight();
        auto w = (SampleType) area.getWidth();
 
        // Oscilloscope
-       auto scopeRect = juce::Rectangle<SampleType> { SampleType (0), SampleType (0), w, h / 2 };
-       plot (sampleData.data(), sampleData.size(), g, scopeRect, SampleType (1), h / 4);
-
-       // Spectrum
-       auto spectrumRect = juce::Rectangle<SampleType> { SampleType (0), h / 2, w, h / 2 };
-       plot (spectrumData.data(), spectrumData.size() / 4, g, spectrumRect);
+       auto scopeRect = juce::Rectangle<SampleType> { SampleType (0), SampleType (0), w, h};
+       plot (sampleData.data(), sampleData.size(), g, scopeRect, SampleType (1), h / 2);
    }
 
 
@@ -80,5 +76,12 @@ void AudioScope::timerCallback()
         g.drawLine ({ juce::jmap (SampleType (i - 1), SampleType (0), SampleType (numSamples - 1), SampleType (right - w), SampleType (right)),
                       center - gain * data[i - 1],
                       juce::jmap (SampleType (i), SampleType (0), SampleType (numSamples - 1), SampleType (right - w), SampleType (right)),
-                      center - gain * data[i] });
+                      center - gain * data[i] }, 2.0f);
+      
+}
+
+int AudioScope::changeColour(int value)
+{
+    colourChanger = value;
+    return colourChanger;
 }

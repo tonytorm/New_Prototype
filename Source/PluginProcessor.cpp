@@ -191,7 +191,7 @@ void New_PrototypeAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer
     leftRMS.skip(buffer.getNumSamples());
     rightRMS.skip(buffer.getNumSamples());
     
-    
+    audioScopeCollector->process (buffer.getReadPointer (0), (size_t) buffer.getNumSamples());
     //================================================ smooth left channel values
     {
         const auto value = Decibels::gainToDecibels(buffer.getRMSLevel(0, 0, buffer.getNumSamples()));

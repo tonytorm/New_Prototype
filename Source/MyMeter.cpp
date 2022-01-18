@@ -41,6 +41,8 @@ void MyMeter::paint(Graphics& g)
         g.drawEllipse (p.x + (myRadius * 4.0f), p.y - myRadius*5.f, myRadius+5, myRadius+5, 1.0f);
         g.drawEllipse (p.x - (myRadius * 4.0f), p.y + myRadius*5.f, myRadius+2, myRadius+2, 1.0f);
     }
+    g.setColour(Colours::black);
+    g.drawLine(0, getHeight()-1, getWidth(), getHeight()-1, 2.0f);
 }
 
 void MyMeter::setLevel(const float value)

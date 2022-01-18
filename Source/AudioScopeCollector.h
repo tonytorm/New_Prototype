@@ -12,13 +12,14 @@
 #include <JuceHeader.h>
 #include "AudioBufferQueue.h"
 
-
+/** a class that handles the collection of data from the buffer stream*/
 class AudioScopeCollector
 {
 public:
     using SampleType = float;   // hardcoding the type of an ex-template class
-    
+    /** constructor tha takes the queue to writo into as an argument*/
     AudioScopeCollector (AudioBufferQueue& queueToUse);
+    /** process the output buffer into useful to data for the buffer quee */
     void process (const SampleType* data, size_t numSamples);
    
 

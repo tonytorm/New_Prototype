@@ -16,7 +16,7 @@ void AudioBufferQueue::push (const SampleType* dataToPush, size_t numSamples)
 
        int start1, size1, start2, size2;
        abstractFifo.prepareToWrite (1, start1, size1, start2, size2);
-
+       
        jassert (size1 <= 1);
        jassert (size2 == 0);
 

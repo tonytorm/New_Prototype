@@ -7,7 +7,7 @@
 #include "OtherLookAndFeel.hpp"
 #include "MyMeter.hpp"
 #include "FilePlayerGui.hpp"
-
+#include "AudioScope.h"
 //==============================================================================
 /**
 */
@@ -50,6 +50,6 @@ private:
     FilePlayerGui filePlayerGui;
     Label title {"O.G.uicer"};
     float frameCount; 
-    
+    AudioScope* scopeComponent;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (New_PrototypeAudioProcessorEditor)
 };

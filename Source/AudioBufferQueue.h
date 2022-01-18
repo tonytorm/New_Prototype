@@ -11,7 +11,7 @@
 #pragma once
 #include <JuceHeader.h>
 
-
+/** a class to store the audio buffer stream in order to plot it*/
 class AudioBufferQueue
 {
 public:
@@ -21,7 +21,9 @@ public:
     static constexpr size_t numBuffers = 5;
 
     //==============================================================================
+    /** writes into the FIFO (buffer queue) */
     void push (const SampleType* dataToPush, size_t numSamples);
+    /** reads from the FIFO (buffer queue) */
     void pop (SampleType* outputBuffer);
    
 
