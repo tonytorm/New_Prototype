@@ -55,6 +55,7 @@ public:
     juce::AudioProcessorValueTreeState& getState(); // returns state of ValueTreeState
     float getRMSValue(const int channel) const; // grabs rms value from channel
     FilePlayer* getFilePlayer() {return &filePlayer;}; // links file player guy
+    /** return the AudioBufferQueue to use for the oscilloscope */
     AudioBufferQueue& getAudioBufferQueue() noexcept { return audioBufferQueue; };
     
 private:

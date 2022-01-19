@@ -21,7 +21,9 @@ public:
     static constexpr size_t numBuffers = 5;
 
     //==============================================================================
-    /** writes into the FIFO (buffer queue) */
+    /** writes into the FIFO (buffer queue)
+     * @param dataToPush a pointer to the data to write onto the bufferQueue
+     * @param numSamples the number of samples per buffer */
     void push (const SampleType* dataToPush, size_t numSamples);
     /** reads from the FIFO (buffer queue) */
     void pop (SampleType* outputBuffer);

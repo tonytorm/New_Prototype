@@ -84,10 +84,10 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6fe7de93f7aa410e025592cd9a51af4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_audio_scope_collector.html#a6fe7de93f7aa410e025592cd9a51af4c">AudioScopeCollector</a> (<a class="el" href="class_audio_buffer_queue.html">AudioBufferQueue</a> &amp;queueToUse)</td></tr>
-<tr class="memdesc:a6fe7de93f7aa410e025592cd9a51af4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor tha takes the queue to writo into as an argument  <a href="class_audio_scope_collector.html#a6fe7de93f7aa410e025592cd9a51af4c">More...</a><br /></td></tr>
+<tr class="memdesc:a6fe7de93f7aa410e025592cd9a51af4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor, takes the queue to write into as an argument  <a href="class_audio_scope_collector.html#a6fe7de93f7aa410e025592cd9a51af4c">More...</a><br /></td></tr>
 <tr class="separator:a6fe7de93f7aa410e025592cd9a51af4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49459ee7d2f07c053ed78942e08e189b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_audio_scope_collector.html#a49459ee7d2f07c053ed78942e08e189b">process</a> (const <a class="el" href="class_audio_scope_collector.html#a619c50ec0a7c52c4a5b775c417a13ed7">SampleType</a> *data, size_t numSamples)</td></tr>
-<tr class="memdesc:a49459ee7d2f07c053ed78942e08e189b"><td class="mdescLeft">&#160;</td><td class="mdescRight">process the output buffer into useful to data for the buffer quee  <a href="class_audio_scope_collector.html#a49459ee7d2f07c053ed78942e08e189b">More...</a><br /></td></tr>
+<tr class="memdesc:a49459ee7d2f07c053ed78942e08e189b"><td class="mdescLeft">&#160;</td><td class="mdescRight">process the output buffer into useful to data for the buffer queuee  <a href="class_audio_scope_collector.html#a49459ee7d2f07c053ed78942e08e189b">More...</a><br /></td></tr>
 <tr class="separator:a49459ee7d2f07c053ed78942e08e189b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -124,7 +124,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>constructor tha takes the queue to writo into as an argument </p>
+<p>constructor, takes the queue to write into as an argument </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queueToUse</td><td>the <a class="el" href="class_audio_buffer_queue.html" title="a class to store the audio buffer stream in order to plot it">AudioBufferQueue</a> to read from </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -155,7 +161,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>process the output buffer into useful to data for the buffer quee </p>
+<p>process the output buffer into useful to data for the buffer queuee </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the actual buffer data </td></tr>
+    <tr><td class="paramname">numSamples</td><td>the number of samples per buffer </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

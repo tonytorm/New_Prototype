@@ -16,7 +16,8 @@ public:
     /** Destructor */
     ~FilePlayerGui();
     
-    /** sets the file player that this gui controls */
+    /** sets the file player that this gui controls
+     * @param fp a pointer to the file player object*/
     void setFilePlayer (FilePlayer* fp);
     
     //Component

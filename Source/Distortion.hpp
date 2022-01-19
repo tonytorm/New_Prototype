@@ -15,7 +15,8 @@ public:
     void prepare (juce::dsp::ProcessSpec);
     /** resets all the underlying effects */
     void reset();
-    /** processes audio signal */
+    /** processes audio signal
+     * @param context  information that is passed into an algorithm's process method.*/
     void process (juce::dsp::ProcessContextReplacing<float> context);
     /** updates slider parameters*/
     void updateParameters();

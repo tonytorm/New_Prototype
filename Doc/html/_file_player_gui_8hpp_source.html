@@ -85,25 +85,25 @@ $(function() {
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="class_file_player_gui.html#abff79f59b610d4bc527bc7c7a6108387">~FilePlayerGui</a>();</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_player_gui.html#af93d82358359bba53b6289c10f1bbb38">setFilePlayer</a> (<a class="code hl_class" href="class_file_player.html">FilePlayer</a>* fp);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">//Component</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_player_gui.html#a1fcfb96b760f79ae238debd24a7b1258">resized</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_player_gui.html#a32930d925db93d6036c91aa0d2f40912">paint</a> (Graphics&amp; g) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_player_gui.html#a44a84dab988b13eab3e377c3d66162f0">paintOverChildren</a> (Graphics&amp; g) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">//Button Listener</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> buttonClicked (Button* button) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">//FilenameComponentListener</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> filenameComponentChanged (FilenameComponent* fileComponentThatHasChanged) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    TextButton playButton   { <span class="stringliteral">&quot;&gt;&quot;</span> };</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    std::unique_ptr&lt;FilenameComponent&gt; fileChooser;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_class" href="class_file_player.html">FilePlayer</a>* filePlayer  { <span class="keyword">nullptr</span> };</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_player_gui.html#af93d82358359bba53b6289c10f1bbb38">setFilePlayer</a> (<a class="code hl_class" href="class_file_player.html">FilePlayer</a>* fp);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">//Component</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_player_gui.html#a1fcfb96b760f79ae238debd24a7b1258">resized</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_player_gui.html#a32930d925db93d6036c91aa0d2f40912">paint</a> (Graphics&amp; g) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_file_player_gui.html#a44a84dab988b13eab3e377c3d66162f0">paintOverChildren</a> (Graphics&amp; g) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">//Button Listener</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> buttonClicked (Button* button) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">//FilenameComponentListener</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> filenameComponentChanged (FilenameComponent* fileComponentThatHasChanged) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    TextButton playButton   { <span class="stringliteral">&quot;&gt;&quot;</span> };</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    std::unique_ptr&lt;FilenameComponent&gt; fileChooser;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_class" href="class_file_player.html">FilePlayer</a>* filePlayer  { <span class="keyword">nullptr</span> };</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
 <div class="ttc" id="a_file_player_8hpp_html"><div class="ttname"><a href="_file_player_8hpp.html">FilePlayer.hpp</a></div></div>
 <div class="ttc" id="aclass_file_player_gui_html"><div class="ttname"><a href="class_file_player_gui.html">FilePlayerGui</a></div><div class="ttdoc">Gui for the FilePlayer class.</div><div class="ttdef"><b>Definition:</b> FilePlayerGui.hpp:11</div></div>
 <div class="ttc" id="aclass_file_player_gui_html_a1b13c55572ff0b00e0f000461e587238"><div class="ttname"><a href="class_file_player_gui.html#a1b13c55572ff0b00e0f000461e587238">FilePlayerGui::FilePlayerGui</a></div><div class="ttdeci">FilePlayerGui()</div><div class="ttdoc">constructor - receives a reference to a FilePlayer object to control</div><div class="ttdef"><b>Definition:</b> FilePlayerGui.cpp:4</div></div>

@@ -17,9 +17,12 @@ class AudioScopeCollector
 {
 public:
     using SampleType = float;   // hardcoding the type of an ex-template class
-    /** constructor, takes the queue to write into as an argument*/
+    /** constructor, takes the queue to write into as an argument
+     * @param queueToUse the AudioBufferQueue to read from */
     AudioScopeCollector (AudioBufferQueue& queueToUse);
-    /** process the output buffer into useful to data for the buffer quee */
+    /** process the output buffer into useful to data for the buffer queuee
+     * @param data the actual buffer data
+     * @param numSamples the number of samples per buffer*/
     void process (const SampleType* data, size_t numSamples);
    
 
