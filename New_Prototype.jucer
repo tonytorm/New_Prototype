@@ -23,11 +23,7 @@
         <FILE id="DhuJ86" name="AudioScope.cpp" compile="1" resource="0" file="Source/AudioScope.cpp"/>
         <FILE id="IYwYLp" name="AudioScope.h" compile="0" resource="0" file="Source/AudioScope.h"/>
         <GROUP id="{C6A90387-BE72-1C2A-3253-A2A6893FF29B}" name="Resources">
-          <FILE id="xpBbLH" name="squueze.svg" compile="0" resource="1" file="../../../Creative Cloud Files/squueze.svg"/>
-          <FILE id="qBt4rD" name="cog_2.svg" compile="0" resource="1" file="../../../Creative Cloud Files/cog_2.svg"/>
-          <FILE id="rrkHnx" name="squeezer_2.svg" compile="0" resource="1" file="../../../Creative Cloud Files/squeezer_2.svg"/>
-          <FILE id="n4teEu" name="cog_1.svg" compile="0" resource="1" file="../../../Creative Cloud Files/cog_1.svg"/>
-          <FILE id="No9Zic" name="squeezer.svg" compile="0" resource="1" file="../../../Creative Cloud Files/squeezer.svg"/>
+          <FILE id="NH1CQO" name="rightsize.svg" compile="0" resource="1" file="../../rightsize.svg"/>
         </GROUP>
       </GROUP>
       <GROUP id="{1F09A3BF-817E-8505-F873-7F8F223361A3}" name="Audio">

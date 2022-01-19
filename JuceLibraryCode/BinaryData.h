@@ -8,23 +8,11 @@
 
 namespace BinaryData
 {
-    extern const char*   squueze_svg;
-    const int            squueze_svgSize = 758;
-
-    extern const char*   cog_2_svg;
-    const int            cog_2_svgSize = 1409;
-
-    extern const char*   squeezer_2_svg;
-    const int            squeezer_2_svgSize = 1171;
-
-    extern const char*   cog_1_svg;
-    const int            cog_1_svgSize = 784;
-
-    extern const char*   squeezer_svg;
-    const int            squeezer_svgSize = 1172;
+    extern const char*   rightsize_svg;
+    const int            rightsize_svgSize = 81646;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 5;
+    const int namedResourceListSize = 1;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];
